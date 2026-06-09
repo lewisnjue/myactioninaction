@@ -1,0 +1,20 @@
+name: "lewisnjue s action in actions"
+description: " great someone and always return 42"
+inputs:
+  who-to-great:
+    description: "who to great"
+    required: true
+    default: "world"
+outputs:
+  answer:
+    description: "the answer to everthing always 42"
+
+
+runs:
+  using: docker
+  image: Docerfile
+  args:
+    - ${{inputs.who-to-great}}
+    
+   
+   

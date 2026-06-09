@@ -1,8 +1,8 @@
 name: "lewisnjue s action in actions"
 description: " great someone and always return 42"
 inputs:
-  who-to-great:
-    description: "who to great"
+  who-to-greet:
+    description: "who to greet"
     required: true
     default: "world"
 outputs:
@@ -12,9 +12,6 @@ outputs:
 
 runs:
   using: docker
-  image: Docerfile
+  image: Dockerfile
   args:
-    - ${{inputs.who-to-great}}
-    
-   
-   
+    - ${{ inputs.who-to-greet }}
